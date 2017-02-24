@@ -5,7 +5,7 @@ var mongo = require('mongodb').MongoClient;
 var app = express();
 
 var port = process.env.PORT || 3000;
-var db_location = 'mongodb://localhost:27017/url_shortener_db';
+var db_location = process.env.MONGODB_URI || 'mongodb://localhost:27017/url_shortener_db';
 
 /* utility */
 
